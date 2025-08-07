@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Stlite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@stlite/browser@0.86.0/build/stlite.css"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module">
+      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.86.0/build/stlite.js";
+      mount(
+        {
+          entrypoint: "👋_Hello.py",
+          files: {
+            "👋_Hello.py": `
+import streamlit as st
+
+st.set_page_config(page_title="Hello")
+st.title("Main page")
+      `,
+            "pages/1_⭐️_Page1.py": `
+import streamlit as st
+
+st.set_page_config(page_title="Page1")
+st.title("Page 1")
+      `,
+            "pages/2_🎈_Page2.py": `
+import streamlit as st
+
+st.set_page_config(page_title="Page2")
+st.title("Page 2")
+      `,
+          },
+        },
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>
