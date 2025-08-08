@@ -1,31 +1,3 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>ASEAN-DIWA Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@stlite/browser@0.83.0/build/stlite.css"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module">
-      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.83.0/build/stlite.js";
-      mount({
-        requirements: [
-          "pandas",
-          "numpy",
-          "plotly",
-        ],
-        entrypoint: "streamlit_app.py",
-        files: {
-          "streamlit_app.py": `
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -763,9 +735,3 @@ st.markdown(
     "</div>", 
     unsafe_allow_html=True
 )
-          `
-        }
-      });
-    </script>
-  </body>
-</html>
