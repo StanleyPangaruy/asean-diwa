@@ -180,7 +180,7 @@ country_coords = get_country_coordinates()
 
 # Sidebar navigation
 st.sidebar.title("🌏 ASEAN-DIWA")
-st.sidebar.markdown("Digital Inclusion for Women in ASEAN")
+st.sidebar.markdown("Digital Innovation for Women Adavancement in ASEAN")
 
 st.sidebar.markdown("---")
 
@@ -212,7 +212,7 @@ page = st.session_state.current_page
 if page == "Dashboard":
     st.markdown("""
     <div class="main-header">
-        <h1>ASEAN Digital Inclusion for Women Alliance (DIWA)</h1>
+        <h1>ASEAN Digital Innovation for Women Advancement (DIWA)</h1>
         <p>Bridging the Digital Gender Gap in Southeast Asia</p>
     </div>
     """, unsafe_allow_html=True)
@@ -220,7 +220,7 @@ if page == "Dashboard":
     # Project Brief
     with st.expander("📋 Project Brief", expanded=True):
         st.markdown("""
-        **ASEAN-DIWA** is a comprehensive initiative aimed at promoting digital inclusion and reducing 
+        **ASEAN-DIWA** is a comprehensive initiative aimed at promoting digital innovation and reducing 
         the digital gender gap across ASEAN member states and partner countries. Our mission is to:
         
         - 📊 **Monitor** digital gender disparities through data-driven insights
@@ -229,7 +229,7 @@ if page == "Dashboard":
         - 📈 **Track** progress towards achieving digital equality
         
         This dashboard provides interactive visualizations and country-specific analysis to support 
-        evidence-based decision making for digital inclusion initiatives.
+        evidence-based decision making for digital innovation initiatives.
         """)
     
     # Key Metrics Overview
@@ -303,7 +303,7 @@ if page == "Dashboard":
         country_summary = country_summary.sort_values('Value', ascending=False)
         
         fig = px.bar(country_summary, x='Country', y='Value',
-                    title=f'Average Digital Inclusion Score by Country ({selected_year})',
+                    title=f'Average Digital Innovation Score by Country ({selected_year})',
                     color='Value', color_continuous_scale='Pinkyl')
         fig.update_layout(height=500)
         st.plotly_chart(fig, use_container_width=True)
@@ -329,7 +329,7 @@ if page == "Dashboard":
         st.markdown("""
         <div class="indicator-section">
             <h4>🗺️ Interactive Map</h4>
-            <p>Explore geographical patterns of digital inclusion across ASEAN countries with our interactive choropleth maps.</p>
+            <p>Explore geographical patterns of digital innovation across ASEAN countries with our interactive choropleth maps.</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -364,7 +364,7 @@ if page == "Dashboard":
 # ASEAN Map Page
 elif page == "ASEAN Map":
     st.title("🗺️ ASEAN Interactive Map")
-    st.markdown("Explore digital inclusion indicators across ASEAN countries")
+    st.markdown("Explore digital innovation indicators across ASEAN countries")
     
     # Map controls
     col1, col2, col3 = st.columns(3)
@@ -518,7 +518,7 @@ elif page == "Country Profiles":
                   latest_data[latest_data['Gender'] == 'female']['Value'].mean())
     
     summary_text = f"""
-    **{country}** shows an average digital inclusion score of **{avg_all:.1f}%** across all indicators in {latest_year}.
+    **{country}** shows an average digital innovation score of **{avg_all:.1f}%** across all indicators in {latest_year}.
     
     **Key Insights:**
     - Gender Gap: {abs(gender_gap):.1f} percentage points {'(male advantage)' if gender_gap > 0 else '(female advantage)'}
@@ -557,7 +557,7 @@ elif page == "Country Profiles":
 # Comparison Page
 elif page == "Comparison":
     st.title("📈 Country Comparison")
-    st.markdown("Compare digital inclusion indicators across countries")
+    st.markdown("Compare digital innovation indicators across countries")
     
     # Comparison controls
     col1, col2 = st.columns(2)
@@ -672,19 +672,19 @@ elif page == "About":
     st.markdown("""
     ## 🌟 Mission
     
-    The ASEAN Digital Inclusion for Women Alliance (DIWA) is dedicated to bridging the digital gender gap 
+    The ASEAN Digital Innovation for Women Advancement (DIWA) is dedicated to bridging the digital gender gap 
     across Southeast Asia through data-driven insights, collaborative partnerships, and targeted interventions.
     
     ## 🎯 Objectives
     
-    - **Data Collection & Analysis**: Comprehensive monitoring of digital inclusion indicators
+    - **Data Collection & Analysis**: Comprehensive monitoring of digital innovation indicators
     - **Policy Support**: Evidence-based recommendations for inclusive digital policies  
     - **Capacity Building**: Training and resources for stakeholders
     - **Regional Collaboration**: Facilitating knowledge sharing across ASEAN countries
     
     ## 📊 Key Indicators
     
-    Our dashboard tracks six critical indicators of digital inclusion:
+    Our dashboard tracks six critical indicators of digital innovation:
     
     1. **Internet Usage**: Percentage of population using the internet
     2. **Mobile Phone Ownership**: Access to mobile communication technology
@@ -730,7 +730,7 @@ elif page == "About":
     
     ---
     
-    *This dashboard was developed to support evidence-based decision making for digital inclusion initiatives across the ASEAN region.*
+    *This dashboard was developed to support evidence-based decision making for digital innovation initiatives across the ASEAN region.*
     """)
     
     # Technical information
@@ -758,7 +758,7 @@ elif page == "About":
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #666;'>"
-    "© 2024 ASEAN-DIWA | Digital Inclusion for Women in ASEAN | "
+    "© 2024 ASEAN-DIWA | Digital Innovation for Women Advancement in ASEAN | "
     "Dashboard v1.0"
     "</div>", 
     unsafe_allow_html=True
